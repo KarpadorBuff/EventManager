@@ -41,6 +41,7 @@
             CreateListBox = new ListBox();
             label1 = new Label();
             panelDELETE = new Panel();
+            deletebutton = new Button();
             DeleteListbox = new ListBox();
             DeleteText = new TextBox();
             label2 = new Label();
@@ -50,7 +51,6 @@
             EmailChangeText = new TextBox();
             changeTextbox = new ListBox();
             NameChangeText = new TextBox();
-            deletebutton = new Button();
             panelREAD.SuspendLayout();
             panelCREATE.SuspendLayout();
             panelDELETE.SuspendLayout();
@@ -204,6 +204,18 @@
             panelDELETE.TabIndex = 6;
             panelDELETE.Visible = false;
             // 
+            // deletebutton
+            // 
+            deletebutton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            deletebutton.BackColor = SystemColors.ControlDarkDark;
+            deletebutton.FlatStyle = FlatStyle.Flat;
+            deletebutton.Location = new Point(441, 32);
+            deletebutton.Name = "deletebutton";
+            deletebutton.Size = new Size(91, 23);
+            deletebutton.TabIndex = 10;
+            deletebutton.Text = "button1";
+            deletebutton.UseVisualStyleBackColor = false;
+            // 
             // DeleteListbox
             // 
             DeleteListbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -237,6 +249,7 @@
             // 
             // panelCHANGE
             // 
+            panelCHANGE.AutoSize = true;
             panelCHANGE.BackColor = SystemColors.ControlDark;
             panelCHANGE.Controls.Add(changeButton);
             panelCHANGE.Controls.Add(label3);
@@ -289,7 +302,7 @@
             changeTextbox.ItemHeight = 15;
             changeTextbox.Location = new Point(3, 80);
             changeTextbox.Name = "changeTextbox";
-            changeTextbox.Size = new Size(529, 242);
+            changeTextbox.Size = new Size(529, 227);
             changeTextbox.TabIndex = 12;
             // 
             // NameChangeText
@@ -301,18 +314,6 @@
             NameChangeText.Name = "NameChangeText";
             NameChangeText.Size = new Size(432, 16);
             NameChangeText.TabIndex = 10;
-            // 
-            // deletebutton
-            // 
-            deletebutton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            deletebutton.BackColor = SystemColors.ControlDarkDark;
-            deletebutton.FlatStyle = FlatStyle.Flat;
-            deletebutton.Location = new Point(441, 32);
-            deletebutton.Name = "deletebutton";
-            deletebutton.Size = new Size(91, 23);
-            deletebutton.TabIndex = 10;
-            deletebutton.Text = "button1";
-            deletebutton.UseVisualStyleBackColor = false;
             // 
             // GUI
             // 
@@ -336,6 +337,7 @@
             panelCHANGE.ResumeLayout(false);
             panelCHANGE.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
