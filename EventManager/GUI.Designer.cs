@@ -243,7 +243,7 @@
             panelCHANGE.Controls.Add(EmailChangeText);
             panelCHANGE.Controls.Add(changeTextbox);
             panelCHANGE.Controls.Add(NameChangeText);
-            panelCHANGE.Location = new Point(579, 41);
+            panelCHANGE.Location = new Point(12, 41);
             panelCHANGE.Name = "panelCHANGE";
             panelCHANGE.Size = new Size(538, 334);
             panelCHANGE.TabIndex = 6;
