@@ -17,34 +17,49 @@ namespace EventManager
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            switch (dropDown.SelectedIndex)
-            {
-                case 0:
-                    {
-                        DataAccess db = new DataAccess();
-                        users = db.GetUsers(lastNameText.Text);
-                        peopleFoundListBox.DataSource = users;
-                        peopleFoundListBox.DisplayMember = "FullInfo";
-                        break;
-                    }
-                case 1:
-                    {
-                        break;
-                    }
-                case 2:
-                    {
-                        break;
-                    }
-                case 3:
-                    {
-                        break;
-                    }
-            }
-           
+            DataAccess db = new DataAccess();
+            users = db.GetUsers(lastNameText.Text);
+            peopleFoundListBox.DataSource = users;
+            peopleFoundListBox.DisplayMember = "FullInfo";
         }
 
         private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
+            switch (dropDown.SelectedIndex)
+            {
+                case 0:
+                    {
+                        panelCREATE.Visible = true;
+                        panelDELETE.Visible = false;
+                        panelCHANGE.Visible = false;
+                        panelREAD.Visible = false;
+                        break;
+                    }
+                case 1:
+                    {
+                        panelCREATE.Visible = false;
+                        panelDELETE.Visible = true;
+                        panelCHANGE.Visible = false;
+                        panelREAD.Visible = false;
+                        break;
+                    }
+                case 2:
+                    {
+                        panelCREATE.Visible = false;
+                        panelDELETE.Visible = false;
+                        panelCHANGE.Visible = true;
+                        panelREAD.Visible = false;
+                        break;
+                    }
+                case 3:
+                    {
+                        panelCREATE.Visible = false;
+                        panelDELETE.Visible = false;
+                        panelCHANGE.Visible = false;
+                        panelREAD.Visible = true; 
+                        break;
+                    }
+            }
             lastNameText.Text = $"Selected Index: {dropDown.SelectedIndex}";
         }
     }
