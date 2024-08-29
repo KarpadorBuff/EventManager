@@ -57,7 +57,7 @@ namespace EventManager
                         panelCREATE.Visible = false;
                         panelDELETE.Visible = false;
                         panelCHANGE.Visible = false;
-                        panelREAD.Visible = true; 
+                        panelREAD.Visible = true;
                         break;
                     }
                 case -1:
@@ -69,7 +69,8 @@ namespace EventManager
                         break;
                     }
             }
-           
+
         }
+
     }
 }
