@@ -19,10 +19,7 @@ namespace EventManager
             {
                 case 0:
                     {
-                        DataAccess db = new DataAccess();
-                        users = db.GetUsers(lastNameText.Text);
-                        peopleFoundListBox.DataSource = users;
-                        peopleFoundListBox.DisplayMember = "FullInfo";
+
                         break;
                     }
                 case 1:
@@ -37,13 +34,21 @@ namespace EventManager
                     {
                         break;
                     }
+                case -1:
+                    {
+                        DataAccess db = new DataAccess();
+                        users = db.GetUsers(lastNameText.Text);
+                        peopleFoundListBox.DataSource = users;
+                        peopleFoundListBox.DisplayMember = "FullInfo";
+                        break;
+                    }
             }
            
         }
 
         private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lastNameText.Text = $"Selected Index: {dropDown.SelectedIndex}";
+            lastNameText.Text = dropDown.SelectedIndex.ToString() ;
         }
     }
 }

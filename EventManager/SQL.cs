@@ -8,6 +8,6 @@ namespace EventManager
 {
     internal class SQL
     {
-        IEnumerable<int>
+    //    IEnumerable<int>
     }
 }

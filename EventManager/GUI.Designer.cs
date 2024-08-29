@@ -102,6 +102,6 @@
         private ListBox peopleFoundListBox;
         private TextBox lastNameText;
         private Panel panelRead;
-        public ComboBox dropDown;
+        public static ComboBox dropDown;
     }
 }
