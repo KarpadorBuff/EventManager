@@ -2,15 +2,17 @@ namespace EventManager
 {
     public partial class GUI : Form
     {
+        public GUI instance;
         List<Benutzer> users = new();
         public GUI()
         {
+            instance = this;
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Basics.OnStartup();
+            Basics.OnStartup(this);
         }
 
         private void searchButton_Click(object sender, EventArgs e)
