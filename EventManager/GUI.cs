@@ -71,10 +71,5 @@ namespace EventManager
             }
            
         }
-
-        private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lastNameText.Text = dropDown.SelectedIndex.ToString() ;
-        }
     }
 }
