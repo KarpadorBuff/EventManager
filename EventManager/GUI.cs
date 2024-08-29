@@ -14,6 +14,7 @@ namespace EventManager
         {
             Basics.OnStartup(this);
         }
+        //idk
 
         private void searchButton_Click(object sender, EventArgs e)
         {
@@ -59,8 +60,21 @@ namespace EventManager
                         panelREAD.Visible = true; 
                         break;
                     }
+                case -1:
+                    {
+                        DataAccess db = new DataAccess();
+                        users = db.GetUsers(lastNameText.Text);
+                        peopleFoundListBox.DataSource = users;
+                        peopleFoundListBox.DisplayMember = "FullInfo";
+                        break;
+                    }
             }
-            lastNameText.Text = $"Selected Index: {dropDown.SelectedIndex}";
+           
+        }
+
+        private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lastNameText.Text = dropDown.SelectedIndex.ToString() ;
         }
     }
 }
