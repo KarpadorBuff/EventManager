@@ -32,11 +32,13 @@
             peopleFoundListBox = new ListBox();
             lastNameText = new TextBox();
             dropDown = new ComboBox();
+            panelRead = new Panel();
+            panelRead.SuspendLayout();
             SuspendLayout();
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(1062, 359);
+            searchButton.Location = new Point(452, 5);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(91, 23);
             searchButton.TabIndex = 0;
@@ -48,40 +50,50 @@
             // 
             peopleFoundListBox.FormattingEnabled = true;
             peopleFoundListBox.ItemHeight = 15;
-            peopleFoundListBox.Location = new Point(624, 388);
+            peopleFoundListBox.Location = new Point(14, 34);
             peopleFoundListBox.Name = "peopleFoundListBox";
             peopleFoundListBox.Size = new Size(529, 259);
             peopleFoundListBox.TabIndex = 1;
             // 
             // lastNameText
             // 
-            lastNameText.Location = new Point(624, 360);
+            lastNameText.Location = new Point(14, 6);
             lastNameText.Name = "lastNameText";
             lastNameText.Size = new Size(432, 23);
             lastNameText.TabIndex = 2;
             // 
-            // comboBox1
+            // dropDown
             // 
             dropDown.FormattingEnabled = true;
             dropDown.Location = new Point(12, 12);
-            dropDown.Name = "comboBox1";
+            dropDown.Name = "dropDown";
             dropDown.Size = new Size(121, 23);
             dropDown.TabIndex = 3;
+            dropDown.SelectedIndexChanged += dropDown_SelectedIndexChanged;
+            // 
+            // panelRead
+            // 
+            panelRead.Controls.Add(peopleFoundListBox);
+            panelRead.Controls.Add(searchButton);
+            panelRead.Controls.Add(lastNameText);
+            panelRead.Location = new Point(12, 41);
+            panelRead.Name = "panelRead";
+            panelRead.Size = new Size(1141, 312);
+            panelRead.TabIndex = 4;
             // 
             // GUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 659);
+            Controls.Add(panelRead);
             Controls.Add(dropDown);
-            Controls.Add(lastNameText);
-            Controls.Add(peopleFoundListBox);
-            Controls.Add(searchButton);
             Name = "GUI";
             Text = "Form1";
             Load += Form1_Load;
+            panelRead.ResumeLayout(false);
+            panelRead.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -89,6 +101,7 @@
         private Button searchButton;
         private ListBox peopleFoundListBox;
         private TextBox lastNameText;
-        private ComboBox dropDown;
+        private Panel panelRead;
+        public ComboBox dropDown;
     }
 }

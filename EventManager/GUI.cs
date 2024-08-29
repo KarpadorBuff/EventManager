@@ -10,10 +10,7 @@ namespace EventManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dropDown.Items.Add("Create");
-            dropDown.Items.Add("Delete");
-            dropDown.Items.Add("Change");
-            dropDown.Items.Add("Read");
+            Basics.OnStartup();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -42,6 +39,11 @@ namespace EventManager
                     }
             }
            
+        }
+
+        private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lastNameText.Text = $"Selected Index: {dropDown.SelectedIndex}";
         }
     }
 }
