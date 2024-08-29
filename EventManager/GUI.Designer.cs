@@ -31,11 +31,12 @@
             searchButton = new Button();
             peopleFoundListBox = new ListBox();
             lastNameText = new TextBox();
+            dropDown = new ComboBox();
             SuspendLayout();
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(697, 45);
+            searchButton.Location = new Point(1062, 359);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(91, 23);
             searchButton.TabIndex = 0;
@@ -47,23 +48,32 @@
             // 
             peopleFoundListBox.FormattingEnabled = true;
             peopleFoundListBox.ItemHeight = 15;
-            peopleFoundListBox.Location = new Point(259, 74);
+            peopleFoundListBox.Location = new Point(624, 388);
             peopleFoundListBox.Name = "peopleFoundListBox";
             peopleFoundListBox.Size = new Size(529, 259);
             peopleFoundListBox.TabIndex = 1;
             // 
             // lastNameText
             // 
-            lastNameText.Location = new Point(259, 46);
+            lastNameText.Location = new Point(624, 360);
             lastNameText.Name = "lastNameText";
             lastNameText.Size = new Size(432, 23);
             lastNameText.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            dropDown.FormattingEnabled = true;
+            dropDown.Location = new Point(12, 12);
+            dropDown.Name = "comboBox1";
+            dropDown.Size = new Size(121, 23);
+            dropDown.TabIndex = 3;
             // 
             // GUI
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1165, 659);
+            Controls.Add(dropDown);
             Controls.Add(lastNameText);
             Controls.Add(peopleFoundListBox);
             Controls.Add(searchButton);
@@ -79,5 +89,6 @@
         private Button searchButton;
         private ListBox peopleFoundListBox;
         private TextBox lastNameText;
+        private ComboBox dropDown;
     }
 }

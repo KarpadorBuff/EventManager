@@ -10,7 +10,10 @@ namespace EventManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            dropDown.Items.Add("Create");
+            dropDown.Items.Add("Delete");
+            dropDown.Items.Add("Change");
+            dropDown.Items.Add("Read");
         }
 
         private void searchButton_Click(object sender, EventArgs e)
