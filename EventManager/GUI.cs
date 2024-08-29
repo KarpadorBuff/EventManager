@@ -17,10 +17,30 @@ namespace EventManager
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new();
-            users = db.GetUsers(lastNameText.Text);
-            peopleFoundListBox.DataSource = users;
-            peopleFoundListBox.DisplayMember = "FullInfo";
+            switch (dropDown.SelectedIndex)
+            {
+                case 0:
+                    {
+                        DataAccess db = new DataAccess();
+                        users = db.GetUsers(lastNameText.Text);
+                        peopleFoundListBox.DataSource = users;
+                        peopleFoundListBox.DisplayMember = "FullInfo";
+                        break;
+                    }
+                case 1:
+                    {
+                        break;
+                    }
+                case 2:
+                    {
+                        break;
+                    }
+                case 3:
+                    {
+                        break;
+                    }
+            }
+           
         }
 
         private void dropDown_SelectedIndexChanged(object sender, EventArgs e)
