@@ -18,7 +18,7 @@ namespace EventManager
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            DataAccess db = new DataAccess();
+            DataAccess db = new();
             users = db.GetUsers(lastNameText.Text);
             peopleFoundListBox.DataSource = users;
             peopleFoundListBox.DisplayMember = "FullInfo";
