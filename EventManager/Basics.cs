@@ -9,12 +9,12 @@ namespace EventManager
 {
     internal class Basics
     {
-        public static void OnStartup()
+        public static void OnStartup(GUI instance)
         {
-            GUI.dropDown.Items.Add("Create");
-            GUI.dropDown.Items.Add("Delete");
-            GUI.dropDown.Items.Add("Change");
-            GUI.dropDown.Items.Add("Read");
+            instance.dropDown.Items.Add("Create");
+            instance.dropDown.Items.Add("Delete");
+            instance.dropDown.Items.Add("Change");
+            instance.dropDown.Items.Add("Read");
         }
     }
 }
