@@ -14,7 +14,7 @@ namespace EventManager
         List<Event> RegisteredEvents;
         public string FullInfo
         {
-            get { return $"ID: {BenutzerId}|".PadRight(10,' ') + $" Username: {Username}|".PadRight(10, ' ') + " Email {Email}";}
+            get { return $"ID: {BenutzerId}|".PadRight(10,' ') + $" Username: {Username}|".PadRight(20, ' ') + $" Email {Email}";}
         }
     }
 }

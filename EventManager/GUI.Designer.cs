@@ -69,7 +69,7 @@
             buttonSEARCH.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonSEARCH.BackColor = SystemColors.ControlDarkDark;
             buttonSEARCH.FlatStyle = FlatStyle.Flat;
-            buttonSEARCH.Location = new Point(405, 8);
+            buttonSEARCH.Location = new Point(778, 8);
             buttonSEARCH.Name = "buttonSEARCH";
             buttonSEARCH.Size = new Size(91, 51);
             buttonSEARCH.TabIndex = 0;
@@ -82,18 +82,20 @@
             listBoxREAD.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             listBoxREAD.BackColor = SystemColors.ControlDarkDark;
             listBoxREAD.BorderStyle = BorderStyle.FixedSingle;
+            listBoxREAD.Font = new Font("MS Reference Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             listBoxREAD.FormattingEnabled = true;
-            listBoxREAD.ItemHeight = 15;
+            listBoxREAD.ItemHeight = 19;
             listBoxREAD.Location = new Point(6, 105);
             listBoxREAD.Name = "listBoxREAD";
-            listBoxREAD.Size = new Size(490, 467);
+            listBoxREAD.Size = new Size(863, 458);
             listBoxREAD.TabIndex = 1;
             // 
             // tbREADusername
             // 
+            tbREADusername.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             tbREADusername.BackColor = SystemColors.Control;
             tbREADusername.BorderStyle = BorderStyle.None;
-            tbREADusername.Location = new Point(222, 8);
+            tbREADusername.Location = new Point(595, 8);
             tbREADusername.Name = "tbREADusername";
             tbREADusername.Size = new Size(177, 16);
             tbREADusername.TabIndex = 2;
@@ -124,7 +126,7 @@
             panelREAD.Controls.Add(listBoxREAD);
             panelREAD.Location = new Point(12, 41);
             panelREAD.Name = "panelREAD";
-            panelREAD.Size = new Size(502, 577);
+            panelREAD.Size = new Size(875, 577);
             panelREAD.TabIndex = 4;
             panelREAD.Visible = false;
             // 
@@ -133,7 +135,7 @@
             buttonREADallUsers.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonREADallUsers.BackColor = SystemColors.ControlDarkDark;
             buttonREADallUsers.FlatStyle = FlatStyle.Flat;
-            buttonREADallUsers.Location = new Point(362, 65);
+            buttonREADallUsers.Location = new Point(735, 65);
             buttonREADallUsers.Name = "buttonREADallUsers";
             buttonREADallUsers.Size = new Size(134, 34);
             buttonREADallUsers.TabIndex = 10;
@@ -143,8 +145,9 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(199, 44);
+            label6.Location = new Point(572, 44);
             label6.Name = "label6";
             label6.Size = new Size(17, 15);
             label6.TabIndex = 9;
@@ -152,9 +155,10 @@
             // 
             // tbREADid
             // 
+            tbREADid.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             tbREADid.BackColor = SystemColors.Control;
             tbREADid.BorderStyle = BorderStyle.None;
-            tbREADid.Location = new Point(222, 44);
+            tbREADid.Location = new Point(595, 44);
             tbREADid.Name = "tbREADid";
             tbREADid.Size = new Size(177, 16);
             tbREADid.TabIndex = 8;
@@ -162,8 +166,9 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Location = new Point(180, 26);
+            label5.Location = new Point(553, 26);
             label5.Name = "label5";
             label5.Size = new Size(36, 15);
             label5.TabIndex = 7;
@@ -171,9 +176,10 @@
             // 
             // tbREADemail
             // 
+            tbREADemail.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             tbREADemail.BackColor = SystemColors.Control;
             tbREADemail.BorderStyle = BorderStyle.None;
-            tbREADemail.Location = new Point(222, 26);
+            tbREADemail.Location = new Point(595, 26);
             tbREADemail.Name = "tbREADemail";
             tbREADemail.Size = new Size(177, 16);
             tbREADemail.TabIndex = 6;
@@ -181,8 +187,9 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(157, 8);
+            label4.Location = new Point(530, 8);
             label4.Name = "label4";
             label4.Size = new Size(59, 15);
             label4.TabIndex = 5;
@@ -190,7 +197,6 @@
             // 
             // buttonToggleTable
             // 
-            buttonToggleTable.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonToggleTable.BackColor = SystemColors.ControlDarkDark;
             buttonToggleTable.FlatStyle = FlatStyle.Flat;
             buttonToggleTable.Location = new Point(6, 8);
@@ -205,12 +211,11 @@
             // 
             panelCREATE.BackColor = SystemColors.ControlDark;
             panelCREATE.Controls.Add(buttonCREATE);
-            panelCREATE.Controls.Add(panelDELETE);
             panelCREATE.Controls.Add(tbEmailCREATE);
             panelCREATE.Controls.Add(tbuUsernameCREATE);
             panelCREATE.Controls.Add(listBoxCREATE);
             panelCREATE.Controls.Add(label1);
-            panelCREATE.Location = new Point(526, 41);
+            panelCREATE.Location = new Point(918, 49);
             panelCREATE.Name = "panelCREATE";
             panelCREATE.Size = new Size(541, 334);
             panelCREATE.TabIndex = 5;
@@ -272,13 +277,12 @@
             // panelDELETE
             // 
             panelDELETE.BackColor = SystemColors.ControlDark;
-            panelDELETE.Controls.Add(panelCHANGE);
             panelDELETE.Controls.Add(DELETElabelCurrentMode);
             panelDELETE.Controls.Add(buttonDeleteToggleEVENTUSER);
             panelDELETE.Controls.Add(buttonDELETE);
             panelDELETE.Controls.Add(listBoxDELETE);
             panelDELETE.Controls.Add(label2);
-            panelDELETE.Location = new Point(0, 30);
+            panelDELETE.Location = new Point(912, 93);
             panelDELETE.Name = "panelDELETE";
             panelDELETE.Size = new Size(538, 334);
             panelDELETE.TabIndex = 6;
@@ -349,7 +353,7 @@
             panelCHANGE.Controls.Add(EmailChangeText);
             panelCHANGE.Controls.Add(listBoxCHANGE);
             panelCHANGE.Controls.Add(NameChangeText);
-            panelCHANGE.Location = new Point(0, 32);
+            panelCHANGE.Location = new Point(909, 192);
             panelCHANGE.Name = "panelCHANGE";
             panelCHANGE.Size = new Size(538, 334);
             panelCHANGE.TabIndex = 6;
@@ -413,6 +417,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 721);
+            Controls.Add(panelCHANGE);
+            Controls.Add(panelDELETE);
             Controls.Add(panelCREATE);
             Controls.Add(panelREAD);
             Controls.Add(dropDown);
@@ -429,6 +435,7 @@
             panelCHANGE.ResumeLayout(false);
             panelCHANGE.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
