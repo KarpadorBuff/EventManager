@@ -11,10 +11,10 @@ namespace EventManager
     {
         public static void OnStartup(GUI instance)
         {
-            instance.dropDown.Items.Add("Create");
-            instance.dropDown.Items.Add("Delete");
-            instance.dropDown.Items.Add("Change");
-            instance.dropDown.Items.Add("Read");
+            instance.dropDown.Items.Add("INSERT INTO");
+            instance.dropDown.Items.Add("DELETE");
+            instance.dropDown.Items.Add("UPDATE");
+            instance.dropDown.Items.Add("SELECT");
         }
     }
 }

@@ -28,28 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            searchButton = new Button();
-            peopleFoundListBox = new ListBox();
-            lastNameText = new TextBox();
+            buttonSEARCH = new Button();
+            listBoxREAD = new ListBox();
+            tbREADusername = new TextBox();
             dropDown = new ComboBox();
             panelREAD = new Panel();
-            labelREAD = new Label();
+            buttonREADallUsers = new Button();
+            label6 = new Label();
+            tbREADid = new TextBox();
+            label5 = new Label();
+            tbREADemail = new TextBox();
+            label4 = new Label();
+            buttonToggleTable = new Button();
             panelCREATE = new Panel();
-            Createbutton = new Button();
-            EmailText = new TextBox();
-            NameText = new TextBox();
-            CreateListBox = new ListBox();
+            buttonCREATE = new Button();
+            tbEmailCREATE = new TextBox();
+            tbuUsernameCREATE = new TextBox();
+            listBoxCREATE = new ListBox();
             label1 = new Label();
             panelDELETE = new Panel();
-            deletebutton = new Button();
-            DeleteListbox = new ListBox();
-            DeleteText = new TextBox();
+            DELETElabelCurrentMode = new Label();
+            buttonDeleteToggleEVENTUSER = new Button();
+            buttonDELETE = new Button();
+            listBoxDELETE = new ListBox();
             label2 = new Label();
             panelCHANGE = new Panel();
-            changeButton = new Button();
+            buttonCHANGE = new Button();
             label3 = new Label();
             EmailChangeText = new TextBox();
-            changeTextbox = new ListBox();
+            listBoxCHANGE = new ListBox();
             NameChangeText = new TextBox();
             panelREAD.SuspendLayout();
             panelCREATE.SuspendLayout();
@@ -57,40 +64,40 @@
             panelCHANGE.SuspendLayout();
             SuspendLayout();
             // 
-            // searchButton
+            // buttonSEARCH
             // 
-            searchButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            searchButton.BackColor = SystemColors.ControlDarkDark;
-            searchButton.FlatStyle = FlatStyle.Flat;
-            searchButton.Location = new Point(441, 36);
-            searchButton.Name = "searchButton";
-            searchButton.Size = new Size(91, 23);
-            searchButton.TabIndex = 0;
-            searchButton.Text = "button1";
-            searchButton.UseVisualStyleBackColor = false;
-            searchButton.Click += searchButton_Click;
+            buttonSEARCH.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonSEARCH.BackColor = SystemColors.ControlDarkDark;
+            buttonSEARCH.FlatStyle = FlatStyle.Flat;
+            buttonSEARCH.Location = new Point(405, 8);
+            buttonSEARCH.Name = "buttonSEARCH";
+            buttonSEARCH.Size = new Size(91, 51);
+            buttonSEARCH.TabIndex = 0;
+            buttonSEARCH.Text = "Search";
+            buttonSEARCH.UseVisualStyleBackColor = false;
+            buttonSEARCH.Click += ButtonREAD_Clicked;
             // 
-            // peopleFoundListBox
+            // listBoxREAD
             // 
-            peopleFoundListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            peopleFoundListBox.BackColor = SystemColors.ControlDarkDark;
-            peopleFoundListBox.BorderStyle = BorderStyle.FixedSingle;
-            peopleFoundListBox.FormattingEnabled = true;
-            peopleFoundListBox.ItemHeight = 15;
-            peopleFoundListBox.Location = new Point(3, 65);
-            peopleFoundListBox.Name = "peopleFoundListBox";
-            peopleFoundListBox.Size = new Size(529, 257);
-            peopleFoundListBox.TabIndex = 1;
+            listBoxREAD.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxREAD.BackColor = SystemColors.ControlDarkDark;
+            listBoxREAD.BorderStyle = BorderStyle.FixedSingle;
+            listBoxREAD.FormattingEnabled = true;
+            listBoxREAD.ItemHeight = 15;
+            listBoxREAD.Location = new Point(6, 105);
+            listBoxREAD.Name = "listBoxREAD";
+            listBoxREAD.Size = new Size(490, 467);
+            listBoxREAD.TabIndex = 1;
             // 
-            // lastNameText
+            // tbREADusername
             // 
-            lastNameText.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lastNameText.BackColor = SystemColors.ControlDarkDark;
-            lastNameText.BorderStyle = BorderStyle.None;
-            lastNameText.Location = new Point(3, 36);
-            lastNameText.Name = "lastNameText";
-            lastNameText.Size = new Size(432, 16);
-            lastNameText.TabIndex = 2;
+            tbREADusername.BackColor = SystemColors.Control;
+            tbREADusername.BorderStyle = BorderStyle.None;
+            tbREADusername.Location = new Point(222, 8);
+            tbREADusername.Name = "tbREADusername";
+            tbREADusername.Size = new Size(177, 16);
+            tbREADusername.TabIndex = 2;
+            tbREADusername.TextChanged += tbREADusername_TextChanged;
             // 
             // dropDown
             // 
@@ -105,82 +112,153 @@
             // 
             panelREAD.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panelREAD.BackColor = SystemColors.ControlDark;
-            panelREAD.Controls.Add(labelREAD);
-            panelREAD.Controls.Add(searchButton);
-            panelREAD.Controls.Add(lastNameText);
-            panelREAD.Controls.Add(peopleFoundListBox);
+            panelREAD.Controls.Add(buttonREADallUsers);
+            panelREAD.Controls.Add(label6);
+            panelREAD.Controls.Add(tbREADid);
+            panelREAD.Controls.Add(label5);
+            panelREAD.Controls.Add(tbREADemail);
+            panelREAD.Controls.Add(label4);
+            panelREAD.Controls.Add(buttonToggleTable);
+            panelREAD.Controls.Add(buttonSEARCH);
+            panelREAD.Controls.Add(tbREADusername);
+            panelREAD.Controls.Add(listBoxREAD);
             panelREAD.Location = new Point(12, 41);
             panelREAD.Name = "panelREAD";
-            panelREAD.Size = new Size(538, 334);
+            panelREAD.Size = new Size(502, 577);
             panelREAD.TabIndex = 4;
             panelREAD.Visible = false;
             // 
-            // labelREAD
+            // buttonREADallUsers
             // 
-            labelREAD.AutoSize = true;
-            labelREAD.Location = new Point(3, 0);
-            labelREAD.Name = "labelREAD";
-            labelREAD.Size = new Size(36, 15);
-            labelREAD.TabIndex = 3;
-            labelREAD.Text = "READ";
+            buttonREADallUsers.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonREADallUsers.BackColor = SystemColors.ControlDarkDark;
+            buttonREADallUsers.FlatStyle = FlatStyle.Flat;
+            buttonREADallUsers.Location = new Point(362, 65);
+            buttonREADallUsers.Name = "buttonREADallUsers";
+            buttonREADallUsers.Size = new Size(134, 34);
+            buttonREADallUsers.TabIndex = 10;
+            buttonREADallUsers.Text = "Show all Users";
+            buttonREADallUsers.UseVisualStyleBackColor = false;
+            buttonREADallUsers.Click += buttonREADallUsers_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(199, 44);
+            label6.Name = "label6";
+            label6.Size = new Size(17, 15);
+            label6.TabIndex = 9;
+            label6.Text = "id";
+            // 
+            // tbREADid
+            // 
+            tbREADid.BackColor = SystemColors.Control;
+            tbREADid.BorderStyle = BorderStyle.None;
+            tbREADid.Location = new Point(222, 44);
+            tbREADid.Name = "tbREADid";
+            tbREADid.Size = new Size(177, 16);
+            tbREADid.TabIndex = 8;
+            tbREADid.TextChanged += tbREADid_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(180, 26);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 15);
+            label5.TabIndex = 7;
+            label5.Text = "email";
+            // 
+            // tbREADemail
+            // 
+            tbREADemail.BackColor = SystemColors.Control;
+            tbREADemail.BorderStyle = BorderStyle.None;
+            tbREADemail.Location = new Point(222, 26);
+            tbREADemail.Name = "tbREADemail";
+            tbREADemail.Size = new Size(177, 16);
+            tbREADemail.TabIndex = 6;
+            tbREADemail.TextChanged += tbREADemail_TextChanged;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(157, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 15);
+            label4.TabIndex = 5;
+            label4.Text = "username";
+            // 
+            // buttonToggleTable
+            // 
+            buttonToggleTable.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonToggleTable.BackColor = SystemColors.ControlDarkDark;
+            buttonToggleTable.FlatStyle = FlatStyle.Flat;
+            buttonToggleTable.Location = new Point(6, 8);
+            buttonToggleTable.Name = "buttonToggleTable";
+            buttonToggleTable.Size = new Size(80, 26);
+            buttonToggleTable.TabIndex = 4;
+            buttonToggleTable.Text = "Benutzer";
+            buttonToggleTable.UseVisualStyleBackColor = false;
+            buttonToggleTable.Click += buttonToggleTable_Click;
             // 
             // panelCREATE
             // 
             panelCREATE.BackColor = SystemColors.ControlDark;
-            panelCREATE.Controls.Add(Createbutton);
-            panelCREATE.Controls.Add(EmailText);
-            panelCREATE.Controls.Add(NameText);
-            panelCREATE.Controls.Add(CreateListBox);
+            panelCREATE.Controls.Add(buttonCREATE);
+            panelCREATE.Controls.Add(panelDELETE);
+            panelCREATE.Controls.Add(tbEmailCREATE);
+            panelCREATE.Controls.Add(tbuUsernameCREATE);
+            panelCREATE.Controls.Add(listBoxCREATE);
             panelCREATE.Controls.Add(label1);
-            panelCREATE.Location = new Point(12, 41);
+            panelCREATE.Location = new Point(526, 41);
             panelCREATE.Name = "panelCREATE";
-            panelCREATE.Size = new Size(538, 334);
+            panelCREATE.Size = new Size(541, 334);
             panelCREATE.TabIndex = 5;
             panelCREATE.Visible = false;
             // 
-            // Createbutton
+            // buttonCREATE
             // 
-            Createbutton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            Createbutton.BackColor = SystemColors.ControlDarkDark;
-            Createbutton.FlatStyle = FlatStyle.Flat;
-            Createbutton.Location = new Point(441, 36);
-            Createbutton.Name = "Createbutton";
-            Createbutton.Size = new Size(91, 23);
-            Createbutton.TabIndex = 4;
-            Createbutton.Text = "button1";
-            Createbutton.UseVisualStyleBackColor = false;
+            buttonCREATE.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonCREATE.BackColor = SystemColors.ControlDarkDark;
+            buttonCREATE.FlatStyle = FlatStyle.Flat;
+            buttonCREATE.Location = new Point(442, 36);
+            buttonCREATE.Name = "buttonCREATE";
+            buttonCREATE.Size = new Size(93, 23);
+            buttonCREATE.TabIndex = 4;
+            buttonCREATE.Text = "Create";
+            buttonCREATE.UseVisualStyleBackColor = false;
             // 
-            // EmailText
+            // tbEmailCREATE
             // 
-            EmailText.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            EmailText.BackColor = SystemColors.ControlDarkDark;
-            EmailText.BorderStyle = BorderStyle.None;
-            EmailText.Location = new Point(3, 58);
-            EmailText.Name = "EmailText";
-            EmailText.Size = new Size(432, 16);
-            EmailText.TabIndex = 8;
+            tbEmailCREATE.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbEmailCREATE.BackColor = SystemColors.ControlDarkDark;
+            tbEmailCREATE.BorderStyle = BorderStyle.None;
+            tbEmailCREATE.Location = new Point(3, 58);
+            tbEmailCREATE.Name = "tbEmailCREATE";
+            tbEmailCREATE.Size = new Size(435, 16);
+            tbEmailCREATE.TabIndex = 8;
             // 
-            // NameText
+            // tbuUsernameCREATE
             // 
-            NameText.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NameText.BackColor = SystemColors.ControlDarkDark;
-            NameText.BorderStyle = BorderStyle.None;
-            NameText.Location = new Point(3, 36);
-            NameText.Name = "NameText";
-            NameText.Size = new Size(432, 16);
-            NameText.TabIndex = 4;
+            tbuUsernameCREATE.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbuUsernameCREATE.BackColor = SystemColors.ControlDarkDark;
+            tbuUsernameCREATE.BorderStyle = BorderStyle.None;
+            tbuUsernameCREATE.Location = new Point(3, 36);
+            tbuUsernameCREATE.Name = "tbuUsernameCREATE";
+            tbuUsernameCREATE.Size = new Size(435, 16);
+            tbuUsernameCREATE.TabIndex = 4;
             // 
-            // CreateListBox
+            // listBoxCREATE
             // 
-            CreateListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            CreateListBox.BackColor = SystemColors.ControlDarkDark;
-            CreateListBox.BorderStyle = BorderStyle.FixedSingle;
-            CreateListBox.FormattingEnabled = true;
-            CreateListBox.ItemHeight = 15;
-            CreateListBox.Location = new Point(3, 80);
-            CreateListBox.Name = "CreateListBox";
-            CreateListBox.Size = new Size(529, 242);
-            CreateListBox.TabIndex = 7;
+            listBoxCREATE.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxCREATE.BackColor = SystemColors.ControlDarkDark;
+            listBoxCREATE.BorderStyle = BorderStyle.FixedSingle;
+            listBoxCREATE.FormattingEnabled = true;
+            listBoxCREATE.ItemHeight = 15;
+            listBoxCREATE.Location = new Point(3, 80);
+            listBoxCREATE.Name = "listBoxCREATE";
+            listBoxCREATE.Size = new Size(532, 242);
+            listBoxCREATE.TabIndex = 7;
             // 
             // label1
             // 
@@ -194,49 +272,64 @@
             // panelDELETE
             // 
             panelDELETE.BackColor = SystemColors.ControlDark;
-            panelDELETE.Controls.Add(deletebutton);
-            panelDELETE.Controls.Add(DeleteListbox);
-            panelDELETE.Controls.Add(DeleteText);
+            panelDELETE.Controls.Add(panelCHANGE);
+            panelDELETE.Controls.Add(DELETElabelCurrentMode);
+            panelDELETE.Controls.Add(buttonDeleteToggleEVENTUSER);
+            panelDELETE.Controls.Add(buttonDELETE);
+            panelDELETE.Controls.Add(listBoxDELETE);
             panelDELETE.Controls.Add(label2);
-            panelDELETE.Location = new Point(12, 41);
+            panelDELETE.Location = new Point(0, 30);
             panelDELETE.Name = "panelDELETE";
             panelDELETE.Size = new Size(538, 334);
             panelDELETE.TabIndex = 6;
             panelDELETE.Visible = false;
             // 
-            // deletebutton
+            // DELETElabelCurrentMode
             // 
-            deletebutton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            deletebutton.BackColor = SystemColors.ControlDarkDark;
-            deletebutton.FlatStyle = FlatStyle.Flat;
-            deletebutton.Location = new Point(441, 32);
-            deletebutton.Name = "deletebutton";
-            deletebutton.Size = new Size(91, 23);
-            deletebutton.TabIndex = 10;
-            deletebutton.Text = "button1";
-            deletebutton.UseVisualStyleBackColor = false;
+            DELETElabelCurrentMode.AutoSize = true;
+            DELETElabelCurrentMode.Location = new Point(81, 17);
+            DELETElabelCurrentMode.Name = "DELETElabelCurrentMode";
+            DELETElabelCurrentMode.Size = new Size(30, 15);
+            DELETElabelCurrentMode.TabIndex = 12;
+            DELETElabelCurrentMode.Text = "User";
             // 
-            // DeleteListbox
+            // buttonDeleteToggleEVENTUSER
             // 
-            DeleteListbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            DeleteListbox.BackColor = SystemColors.ControlDarkDark;
-            DeleteListbox.BorderStyle = BorderStyle.FixedSingle;
-            DeleteListbox.FormattingEnabled = true;
-            DeleteListbox.ItemHeight = 15;
-            DeleteListbox.Location = new Point(3, 58);
-            DeleteListbox.Name = "DeleteListbox";
-            DeleteListbox.Size = new Size(529, 257);
-            DeleteListbox.TabIndex = 8;
+            buttonDeleteToggleEVENTUSER.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            buttonDeleteToggleEVENTUSER.BackColor = SystemColors.ControlDarkDark;
+            buttonDeleteToggleEVENTUSER.FlatStyle = FlatStyle.Flat;
+            buttonDeleteToggleEVENTUSER.Location = new Point(52, 32);
+            buttonDeleteToggleEVENTUSER.Name = "buttonDeleteToggleEVENTUSER";
+            buttonDeleteToggleEVENTUSER.Size = new Size(91, 23);
+            buttonDeleteToggleEVENTUSER.TabIndex = 11;
+            buttonDeleteToggleEVENTUSER.Text = "Swap";
+            buttonDeleteToggleEVENTUSER.UseVisualStyleBackColor = false;
+            buttonDeleteToggleEVENTUSER.Click += buttonDeleteToggleEVENTUSER_Click;
             // 
-            // DeleteText
+            // buttonDELETE
             // 
-            DeleteText.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            DeleteText.BackColor = SystemColors.ControlDarkDark;
-            DeleteText.BorderStyle = BorderStyle.None;
-            DeleteText.Location = new Point(3, 36);
-            DeleteText.Name = "DeleteText";
-            DeleteText.Size = new Size(432, 16);
-            DeleteText.TabIndex = 7;
+            buttonDELETE.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            buttonDELETE.BackColor = SystemColors.ControlDarkDark;
+            buttonDELETE.FlatStyle = FlatStyle.Flat;
+            buttonDELETE.Location = new Point(441, 32);
+            buttonDELETE.Name = "buttonDELETE";
+            buttonDELETE.Size = new Size(91, 23);
+            buttonDELETE.TabIndex = 10;
+            buttonDELETE.Text = "Delete";
+            buttonDELETE.UseVisualStyleBackColor = false;
+            // 
+            // listBoxDELETE
+            // 
+            listBoxDELETE.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxDELETE.BackColor = SystemColors.ControlDarkDark;
+            listBoxDELETE.BorderStyle = BorderStyle.FixedSingle;
+            listBoxDELETE.FormattingEnabled = true;
+            listBoxDELETE.ItemHeight = 15;
+            listBoxDELETE.Location = new Point(3, 58);
+            listBoxDELETE.Name = "listBoxDELETE";
+            listBoxDELETE.Size = new Size(529, 257);
+            listBoxDELETE.TabIndex = 8;
+            listBoxDELETE.TabStop = false;
             // 
             // label2
             // 
@@ -251,28 +344,28 @@
             // 
             panelCHANGE.AutoSize = true;
             panelCHANGE.BackColor = SystemColors.ControlDark;
-            panelCHANGE.Controls.Add(changeButton);
+            panelCHANGE.Controls.Add(buttonCHANGE);
             panelCHANGE.Controls.Add(label3);
             panelCHANGE.Controls.Add(EmailChangeText);
-            panelCHANGE.Controls.Add(changeTextbox);
+            panelCHANGE.Controls.Add(listBoxCHANGE);
             panelCHANGE.Controls.Add(NameChangeText);
-            panelCHANGE.Location = new Point(12, 41);
+            panelCHANGE.Location = new Point(0, 32);
             panelCHANGE.Name = "panelCHANGE";
             panelCHANGE.Size = new Size(538, 334);
             panelCHANGE.TabIndex = 6;
             panelCHANGE.Visible = false;
             // 
-            // changeButton
+            // buttonCHANGE
             // 
-            changeButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            changeButton.BackColor = SystemColors.ControlDarkDark;
-            changeButton.FlatStyle = FlatStyle.Flat;
-            changeButton.Location = new Point(441, 36);
-            changeButton.Name = "changeButton";
-            changeButton.Size = new Size(91, 23);
-            changeButton.TabIndex = 9;
-            changeButton.Text = "button1";
-            changeButton.UseVisualStyleBackColor = false;
+            buttonCHANGE.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            buttonCHANGE.BackColor = SystemColors.ControlDarkDark;
+            buttonCHANGE.FlatStyle = FlatStyle.Flat;
+            buttonCHANGE.Location = new Point(439, 51);
+            buttonCHANGE.Name = "buttonCHANGE";
+            buttonCHANGE.Size = new Size(91, 23);
+            buttonCHANGE.TabIndex = 9;
+            buttonCHANGE.Text = "Change";
+            buttonCHANGE.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -293,17 +386,17 @@
             EmailChangeText.Size = new Size(432, 16);
             EmailChangeText.TabIndex = 13;
             // 
-            // changeTextbox
+            // listBoxCHANGE
             // 
-            changeTextbox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            changeTextbox.BackColor = SystemColors.ControlDarkDark;
-            changeTextbox.BorderStyle = BorderStyle.FixedSingle;
-            changeTextbox.FormattingEnabled = true;
-            changeTextbox.ItemHeight = 15;
-            changeTextbox.Location = new Point(3, 80);
-            changeTextbox.Name = "changeTextbox";
-            changeTextbox.Size = new Size(529, 227);
-            changeTextbox.TabIndex = 12;
+            listBoxCHANGE.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxCHANGE.BackColor = SystemColors.ControlDarkDark;
+            listBoxCHANGE.BorderStyle = BorderStyle.FixedSingle;
+            listBoxCHANGE.FormattingEnabled = true;
+            listBoxCHANGE.ItemHeight = 15;
+            listBoxCHANGE.Location = new Point(3, 80);
+            listBoxCHANGE.Name = "listBoxCHANGE";
+            listBoxCHANGE.Size = new Size(529, 227);
+            listBoxCHANGE.TabIndex = 12;
             // 
             // NameChangeText
             // 
@@ -319,14 +412,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1165, 659);
-            Controls.Add(panelCHANGE);
-            Controls.Add(panelDELETE);
+            ClientSize = new Size(1165, 721);
             Controls.Add(panelCREATE);
             Controls.Add(panelREAD);
             Controls.Add(dropDown);
             Name = "GUI";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "EventManagerUwU";
             Load += Form1_Load;
             panelREAD.ResumeLayout(false);
             panelREAD.PerformLayout();
@@ -337,14 +429,13 @@
             panelCHANGE.ResumeLayout(false);
             panelCHANGE.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button searchButton;
-        private ListBox peopleFoundListBox;
-        private TextBox lastNameText;
+        private Button buttonSEARCH;
+        private ListBox listBoxREAD;
+        private TextBox tbREADusername;
         private Panel panelREAD;
         public ComboBox dropDown;
         private Label labelREAD;
@@ -354,16 +445,24 @@
         private Label label2;
         private Panel panelCHANGE;
         private Label label3;
-        private TextBox NameText;
-        private ListBox CreateListBox;
-        private Button Createbutton;
-        private TextBox EmailText;
-        private ListBox DeleteListbox;
-        private TextBox DeleteText;
-        private Button changeButton;
+        private TextBox tbuUsernameCREATE;
+        private ListBox listBoxCREATE;
+        private Button buttonCREATE;
+        private TextBox tbEmailCREATE;
+        private Button buttonCHANGE;
         private TextBox EmailChangeText;
-        private ListBox changeTextbox;
+        private ListBox listBoxCHANGE;
         private TextBox NameChangeText;
-        private Button deletebutton;
+        private Button buttonDELETE;
+        private ListBox listBoxDELETE;
+        private Button buttonDeleteToggleEVENTUSER;
+        private Label DELETElabelCurrentMode;
+        private Button buttonToggleTable;
+        private Label label5;
+        private TextBox tbREADemail;
+        private Label label4;
+        private Label label6;
+        private TextBox tbREADid;
+        private Button buttonREADallUsers;
     }
 }
